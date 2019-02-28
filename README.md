@@ -7,4 +7,5 @@ It will take some time to process the missed snapshots for each VM.
 
 Code is Error free for a Rubrik Cluster running version 5.0.0-p1-827 and Rubrik Powershell module version 4.0.0.216
 
-I am thinking to add a filter by SLA domain name to speed up the results.
+No Error checking is done if you select a remote SLA or Cancel certain inputs.
+
