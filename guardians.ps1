@@ -44,6 +44,9 @@ $ReportArray=@()
 write-host "Getting a list of VM's from the Rubrik Cluster" -ForegroundColor Green
 add-content $logfile "Getting a list of VM's from the Rubrik Cluster"
 $RubrikVMs = Get-Rubrikvm | Select Name, effectiveSlaDomainName,hostName,clusterName,id
+write-host "Getting a list of Missed Snapshots for all VM's" -ForegroundColor Green
+add-content $logfile "Getting a list of Missed Snapshots for all VM's"
+write-host "If you have a large number of VM's this will take some time to process" -ForegroundColor Green
 foreach ($vm in $RubrikVMs) {
 	$VMName = $vm.Name
 	$SLADomain = $vm.effectiveSlaDomainName
