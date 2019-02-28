@@ -10,7 +10,7 @@ $logfolder = ChooseFolder -Message "Please select a log file directory" -Initial
 $logfile = $logfolder + '\' + (Get-Date -Format o |ForEach-Object {$_ -Replace ':', '.'}) + "Guardians.txt"
 write-host "Script result log can be found at $logfile" -ForegroundColor Green
 
-if ( !(Get-Module -Name Rubrik -ErrorAction SilentlyContinue) ) 
+if ( !(Get-InstalledModule -Name Rubrik -ErrorAction SilentlyContinue) )
     {
         write-host ("Rubrik Module not installed. Please verify installation and retry.") -BackgroundColor Red
         write-host "Terminating Script" -BackgroundColor Red
