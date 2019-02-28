@@ -9,3 +9,4 @@ Code is Error free for a Rubrik Cluster running version 5.0.0-p1-827 and Rubrik 
 
 No Error checking is done if you select a remote SLA or Cancel certain inputs.
 
+#Special thanks to Craig for testing and I have modified the master code with your update.
